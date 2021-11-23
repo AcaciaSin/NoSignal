@@ -14,6 +14,7 @@ struct ProfileHeader: View {
     @State private var functionOn3 = false
     @State private var functionOn4 = false
     @State private var functionOn5 = false
+    @State private var functionOn6 = false
     
     let gradient = Gradient(colors: [.blue, .purple])
     
@@ -29,23 +30,21 @@ struct ProfileHeader: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
 //                    .clipped()
                     .padding(.top, 120)
-                
+                    .padding(.leading, 20)
                 
                 VStack(alignment: .leading) {
                     Text("Adbean")
                         .font(.system(size: 32)).bold()
-//                            .foregroundColor(.white)
                     Text("Be happy, dont worry.")
                         .font(.caption)
-//                            .foregroundColor(.white)
-//
+                        .foregroundColor(.secondary)
                 }
-                .padding(.top, 120)
-                .padding(.horizontal)
-                
-                }
+                .padding(.top, 160)
+                .padding(.leading)
+                Spacer()
+            }
             
-            Spacer(minLength: 32)
+            Spacer(minLength: 20)
             List {
                 HStack {
                     Image(systemName: "command")
@@ -65,10 +64,6 @@ struct ProfileHeader: View {
                 }
                 HStack {
                     Image(systemName: "music.note")
-                    Toggle("歌词", isOn: $functionOn2)
-                }
-                HStack {
-                    Image(systemName: "music.note")
                     Toggle("歌词", isOn: $functionOn3)
                 }
                 HStack {
@@ -78,6 +73,10 @@ struct ProfileHeader: View {
                 HStack {
                     Image(systemName: "music.note")
                     Toggle("歌词", isOn: $functionOn5)
+                }
+                HStack {
+                    Image(systemName: "music.note")
+                    Toggle("歌词", isOn: $functionOn6)
                 }
                 HStack {
                     Image(systemName: "music.quarternote.3")

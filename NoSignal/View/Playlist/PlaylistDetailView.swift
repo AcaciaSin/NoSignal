@@ -17,8 +17,7 @@ struct PlaylistDetailView: View {
     var body: some View {
         List {
             HStack {
-                Spacer(minLength: 0)
-                
+//                Spacer(minLength: 0)
                 VStack {
                     Image(uiImage: playlist.representativeItem?.artwork?.image(at: CGSize(width: 500, height: 500)) ?? UIImage(named: "music_background") ?? UIImage())
                         .resizable()
@@ -73,7 +72,6 @@ struct PlaylistDetailView: View {
                         
                     }
                 }
-                
                 Spacer(minLength: 0)
                 
             }

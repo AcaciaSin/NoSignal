@@ -109,7 +109,6 @@ struct PlaybackFullscreenView: View {
                     Spacer(minLength: 0)
                     
                     HStack {
-
                         Image(systemName: "gobackward.15")
                             .font(.largeTitle)
                             .font(.system(size: 40))

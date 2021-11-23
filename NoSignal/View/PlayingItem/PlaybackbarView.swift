@@ -62,9 +62,6 @@ struct PlaybackbarView: View {
                 .background(BlurView(style: .systemChromeMaterial))
                 .matchedGeometryEffect(id: (currentSong.title ?? "") + "frame", in: animation)
             }
-//            .onTapGesture {
-//                model.isPlayerViewPresented.toggle()
-//            }
         }
         
     }

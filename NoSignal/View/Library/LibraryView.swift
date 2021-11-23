@@ -18,12 +18,6 @@ struct LibraryView: View {
                 ForEach(model.librarySons, id: \.self) { song in
                     SongCardView(song: song)
                         .environmentObject(model)
-//                        .onTapGesture {
-//                            let desc =
-//                            MPMusicPlayerMediaItemQueueDescriptor(itemCollection: MPMediaItemCollection(items: [song]))
-//                            model.musicPlayer.setQueue(with: desc)
-//                            model.musicPlayer.play()
-//                        }
                 }
             }
             .navigationBarTitle(Text("Library"), displayMode: .automatic)

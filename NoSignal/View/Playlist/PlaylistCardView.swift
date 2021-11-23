@@ -23,7 +23,7 @@ struct PlaylistCardView: View {
                         .lineLimit(2)
                 }
                 .foregroundColor(.white)
-                
+                .padding(.top, 2)
                 Spacer(minLength: 0)
             }
             .padding(10)
@@ -34,7 +34,7 @@ struct PlaylistCardView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 50)
                     .blur(radius: 50, opaque: true)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+//                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     .cornerRadius(10, corners: [.bottomLeft, .bottomRight])
 //                BlurView(style: .systemUltraThinMaterial)
 //                    .cornerRadius(10, corners: [.bottomLeft, .bottomRight])

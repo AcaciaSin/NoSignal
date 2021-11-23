@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "music.png",
+      "filename" : "ic-music (2).png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -12,6 +12,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "ic-music.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
@@ -32,6 +33,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "ic-music (1).png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"

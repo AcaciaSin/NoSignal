@@ -9,10 +9,8 @@ import Foundation
 
 
 struct Song : Hashable {
-    let id: String = ""
+    let id: String
     let name: String
     let artist: String
-    let artworkUrl: String
-    
-    
+    let artworkUrl: String 
 }
