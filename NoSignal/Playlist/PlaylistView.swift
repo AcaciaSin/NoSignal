@@ -14,24 +14,36 @@ struct PlaylistView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                // smoother, while BlurView is not working
-                ForEach(model.playlists.indices.filter{ $0 % 2 == 0 }, id: \.self) { index in
-                    HStack(spacing: 0) {
-                        if index < model.playlists.count {
-                            PlaylistCardView(playlist: model.playlists[index])
-                                .padding(7.5)
-                                .drawingGroup()
-                        }
+//                // v2: change to LazyVGrid
+//                ForEach(model.playlists.indices.filter{ $0 % 2 == 0 }, id: \.self) { index in
+//                    HStack(spacing: 0) {
+//                        if index < model.playlists.count {
+//                            PlaylistCardView(playlist: model.playlists[index])
+//                                .padding(7.5)
+//                                .drawingGroup()
+//                        }
+//
+//                        if index + 1 < model.playlists.count {
+//                            PlaylistCardView(playlist: model.playlists[index + 1])
+//                                .padding(7.5)
+//                                .drawingGroup()
+//                        }
+//
+//                    }
+//                }
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 20),
+                                    GridItem(.flexible(), spacing: 20)],
+                          spacing: 20) {
+                    ForEach(model.playlists, id:\.self) { playlist in
                         
-                        if index + 1 < model.playlists.count {
-                            PlaylistCardView(playlist: model.playlists[index + 1])
-                                .padding(7.5)
-                                .drawingGroup()
-                        }
-                        
+                        NavigationLink (destination: PlaylistDetailView(playlist: playlist),
+                                        label: {
+                            PlaylistCardView(playlist: playlist).drawingGroup()
+                        })
+
                     }
                 }
-                .padding(.horizontal, 7.5)
+                .padding(.horizontal, 20)
             }
             .navigationBarTitle(Text("Playlists"), displayMode: .automatic)
         }

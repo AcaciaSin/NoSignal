@@ -26,7 +26,6 @@ struct PlaybackbarView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .matchedGeometryEffect(id: (currentSong.title ?? "") + "art", in: animation)
                         .frame(width: 70, height: 70)
-//                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding()
                     
                     VStack(alignment: .leading) {
@@ -36,7 +35,9 @@ struct PlaybackbarView: View {
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
-                    .matchedGeometryEffect(id: (currentSong.title ?? "") + "details", in: animation)
+                    .matchedGeometryEffect(id: (currentSong.title ?? "") + "details",
+                                           in: animation,
+                                           properties: .position)
                     
                     Spacer(minLength: 0)
                     
@@ -48,6 +49,12 @@ struct PlaybackbarView: View {
                         
                         Image(systemName: "forward.fill")
                             .font(.title)
+                            .onTapGesture(count: 2, perform: {
+                                model.musicPlayer.skipToPreviousItem()
+                            })
+                            .onTapGesture {
+                                model.musicPlayer.skipToNextItem()
+                            }
                     
                     }
                     .padding(.trailing)

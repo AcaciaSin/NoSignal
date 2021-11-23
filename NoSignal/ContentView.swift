@@ -29,12 +29,6 @@ struct ContentView: View {
                 ZStack {
                     PlaylistView()
                         .environmentObject(model)
-                    
-//                    if !model.isPlayerViewPresented && selection == 0 {
-//                        PlaybackbarView(animation: animation)
-//                            .environmentObject(model)
-//                            .zIndex(2.0)
-//                    }
                 }
                 .tabItem {
                     VStack {
@@ -47,12 +41,6 @@ struct ContentView: View {
                 ZStack {
                     LibraryView()
                         .environmentObject(model)
-                    
-//                    if !model.isPlayerViewPresented && selection == 1 {
-//                        PlaybackbarView(animation: animation)
-//                            .environmentObject(model)
-//                            .zIndex(2.0)
-//                    }
                 }
                 .tabItem {
                     VStack {
@@ -65,12 +53,6 @@ struct ContentView: View {
                 ZStack {
                     UserView()
                         .environmentObject(model)
-                    
-//                    if !model.isPlayerViewPresented && selection == 1 {
-//                        PlaybackbarView(animation: animation)
-//                            .environmentObject(model)
-//                            .zIndex(2.0)
-//                    }
                 }
                 .tabItem {
                     VStack {
@@ -81,11 +63,6 @@ struct ContentView: View {
                 .tag(2)
             }
             .zIndex(1.0)
-//            .fullScreenCover(isPresented: $model.isPlayerViewPresented) {
-//                PlaybackFullscreenView()
-//                    .environmentObject(model)
-//                    .zIndex(2.0)
-//            }
             
             Group {
                 if model.isPlayerViewPresented {
@@ -133,7 +110,7 @@ struct ContentView: View {
 //            .edgesIgnoringSafeArea(.all)
         }
         .accentColor(.pink)
-        .animation(.default, value: 0)
+//        .animation(.default, value: 0)
     }
 }
 

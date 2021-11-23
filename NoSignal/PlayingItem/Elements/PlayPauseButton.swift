@@ -20,25 +20,32 @@ struct PlayPauseButton: View {
             .onReceive(timer, perform:  { _ in
                 let isPlaying = model.musicPlayer.playbackState == .playing
                 if model.isPlaying != isPlaying {
-                    model.isPlaying = isPlaying
+                    withAnimation(Animation.spring(response: 0.7, dampingFraction: 0.85)) {
+                        model.isPlaying = isPlaying
+                    }
+                    
                 }
-                
+            })
+            .padding()
+            .background(Color.white.opacity(0.0001))
+            .onTapGesture(count: 2, perform: {
+                model.musicPlayer.skipToPreviousItem()
             })
 //                .matchedGeometryEffect(id: currentSong.title ?? "" + "play_button", in: animation)
 //                .font(.largeTitle)
-                .onTapGesture {
-                    if model.musicPlayer.playbackState == .paused || model.musicPlayer.playbackState == .stopped {
-                        model.musicPlayer.play()
-                        withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.7)) {
-                            model.isPlaying = true;
-                        }
-                    } else {
-                        model.musicPlayer.pause()
-                        withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.7)) {
-                            model.isPlaying = false;
-                        }
+            .onTapGesture {
+                if model.musicPlayer.playbackState == .paused || model.musicPlayer.playbackState == .stopped {
+                    model.musicPlayer.play()
+                    withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.7)) {
+                        model.isPlaying = true;
+                    }
+                } else {
+                    model.musicPlayer.pause()
+                    withAnimation(Animation.spring(response: 0.6, dampingFraction: 0.7)) {
+                        model.isPlaying = false;
                     }
                 }
+            }
 //        }
         
 
