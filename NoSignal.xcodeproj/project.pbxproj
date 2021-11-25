@@ -30,10 +30,10 @@
 		CF9A75E927475F98007CD441 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A75E827475F98007CD441 /* CornerRadius.swift */; };
 		CF9A75EC27476558007CD441 /* SongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A75EB27476557007CD441 /* SongCardView.swift */; };
 		CFBB2DD9274E8123003B1D2E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DD8274E8123003B1D2E /* SearchBar.swift */; };
-		CFBB2DDB274E8296003B1D2E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DDA274E8296003B1D2E /* DataModel.swift */; };
 		CFBB2DDD274F1A51003B1D2E /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DDC274F1A51003B1D2E /* SongListViewModel.swift */; };
 		CFBB2DDF274F1FCB003B1D2E /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DDE274F1FCB003B1D2E /* EmptyStateView.swift */; };
 		CFBB2DE4274F50B6003B1D2E /* SearchSongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DE3274F50B6003B1D2E /* SearchSongCardView.swift */; };
+		CFBB2DE6274F5744003B1D2E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DE5274F5744003B1D2E /* DataModel.swift */; };
 		CFC74D4A274648E40073DD18 /* NoSignalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC74D49274648E40073DD18 /* NoSignalApp.swift */; };
 		CFC74D4C274648E40073DD18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC74D4B274648E40073DD18 /* ContentView.swift */; };
 		CFC74D4E274648E70073DD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC74D4D274648E70073DD18 /* Assets.xcassets */; };
@@ -65,10 +65,10 @@
 		CF9A75E827475F98007CD441 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CF9A75EB27476557007CD441 /* SongCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
 		CFBB2DD8274E8123003B1D2E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		CFBB2DDA274E8296003B1D2E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = ../../../../../Documents/DataModel.swift; sourceTree = "<group>"; };
 		CFBB2DDC274F1A51003B1D2E /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
 		CFBB2DDE274F1FCB003B1D2E /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CFBB2DE3274F50B6003B1D2E /* SearchSongCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongCardView.swift; sourceTree = "<group>"; };
+		CFBB2DE5274F5744003B1D2E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CFC74D46274648E40073DD18 /* NoSignal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoSignal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC74D49274648E40073DD18 /* NoSignalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSignalApp.swift; sourceTree = "<group>"; };
 		CFC74D4B274648E40073DD18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 			children = (
 				CF703BB3274BDD5D008A599C /* Song.swift */,
 				CF47D09B2747492100831C75 /* Model.swift */,
-				CFBB2DDA274E8296003B1D2E /* DataModel.swift */,
+				CFBB2DE5274F5744003B1D2E /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,7 +338,6 @@
 				CF468796274CE839002B957F /* NowPlayingView.swift in Sources */,
 				CF703BA9274BCC7A008A599C /* PlaybackFullscreenView.swift in Sources */,
 				CFBB2DD9274E8123003B1D2E /* SearchBar.swift in Sources */,
-				CFBB2DDB274E8296003B1D2E /* DataModel.swift in Sources */,
 				CF703BAB274BCC7A008A599C /* InvisibleRefreshView.swift in Sources */,
 				CFC74D4C274648E40073DD18 /* ContentView.swift in Sources */,
 				CF13DBE027474DC1005900E8 /* PlaylistCardView.swift in Sources */,
@@ -351,6 +350,7 @@
 				CFBB2DDF274F1FCB003B1D2E /* EmptyStateView.swift in Sources */,
 				CF703BB6274BDD5D008A599C /* Song.swift in Sources */,
 				CFBB2DE4274F50B6003B1D2E /* SearchSongCardView.swift in Sources */,
+				CFBB2DE6274F5744003B1D2E /* DataModel.swift in Sources */,
 				CF703BB7274BDD5D008A599C /* RemoteSongCardView.swift in Sources */,
 				CF468791274CAED5002B957F /* AppleMusicAPI.swift in Sources */,
 				CF703BAC274BCC7A008A599C /* PlaybackbarView.swift in Sources */,
