@@ -20,7 +20,7 @@ struct NoSignalApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: SongListViewModel())
                 .onChange(of: scenePhase, perform: { value in
                     if value == .active {
                         updateSongs()

@@ -27,12 +27,10 @@ struct SongCardView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-      
-            
+
             VStack(alignment: .leading) {
                 Text(song.title ?? "NA")
                     .font(.headline)
-//                    .font(.title3).bold()
                     .padding(.bottom, 2)
                 Text(song.artist ?? "NA")
                     .font(.caption)

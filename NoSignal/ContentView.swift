@@ -11,7 +11,8 @@ struct ContentView: View {
     
     @ObservedObject var model = Model.shared
     @State var selection = 0
-
+    @ObservedObject var viewModel: SongListViewModel
+    
     var body: some View {
         
         ZStack {
@@ -40,7 +41,7 @@ struct ContentView: View {
                     }
                     .tag(1)
                 
-                SearchView()
+                SearchView(viewModel: viewModel)
                     .environmentObject(model)
                     .tabItem {
                         VStack {
@@ -78,8 +79,4 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+

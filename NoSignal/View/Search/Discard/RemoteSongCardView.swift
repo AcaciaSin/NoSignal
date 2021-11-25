@@ -18,8 +18,6 @@ struct RemoteSongCardView: View {
     
     let song: Song
 
-    
-    
     var body: some View {
         HStack {
 //            Image(uiImage: artwork)
