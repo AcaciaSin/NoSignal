@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF13DBE027474DC1005900E8 /* PlaylistCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13DBDF27474DC1005900E8 /* PlaylistCardView.swift */; };
-		CF46878F274CAC4D002B957F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF46878E274CAC4D002B957F /* SDWebImageSwiftUI */; };
 		CF468791274CAED5002B957F /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF468790274CAED5002B957F /* AppleMusicAPI.swift */; };
-		CF468794274CDF1B002B957F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CF468793274CDF1B002B957F /* SwiftyJSON */; };
 		CF468796274CE839002B957F /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF468795274CE839002B957F /* NowPlayingView.swift */; };
 		CF47D09C2747492100831C75 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47D09B2747492100831C75 /* Model.swift */; };
 		CF47D09E27474C9600831C75 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47D09D27474C9600831C75 /* PlaylistView.swift */; };
@@ -34,6 +32,8 @@
 		CFBB2DDF274F1FCB003B1D2E /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DDE274F1FCB003B1D2E /* EmptyStateView.swift */; };
 		CFBB2DE4274F50B6003B1D2E /* SearchSongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DE3274F50B6003B1D2E /* SearchSongCardView.swift */; };
 		CFBB2DE6274F5744003B1D2E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB2DE5274F5744003B1D2E /* DataModel.swift */; };
+		CFC6E4B0276AFA5100B4FD06 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CFC6E4AF276AFA5100B4FD06 /* SDWebImageSwiftUI */; };
+		CFC6E4B2276AFA5400B4FD06 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CFC6E4B1276AFA5400B4FD06 /* SwiftyJSON */; };
 		CFC74D4A274648E40073DD18 /* NoSignalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC74D49274648E40073DD18 /* NoSignalApp.swift */; };
 		CFC74D4C274648E40073DD18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC74D4B274648E40073DD18 /* ContentView.swift */; };
 		CFC74D4E274648E70073DD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC74D4D274648E70073DD18 /* Assets.xcassets */; };
@@ -42,9 +42,7 @@
 
 /* Begin PBXFileReference section */
 		CF13DBDF27474DC1005900E8 /* PlaylistCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCardView.swift; sourceTree = "<group>"; };
-		CF46878C274CAB4E002B957F /* SDWebImageSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SDWebImageSwiftUI; sourceTree = "<group>"; };
 		CF468790274CAED5002B957F /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
-		CF468792274CDF0F002B957F /* SwiftyJSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftyJSON; sourceTree = "<group>"; };
 		CF468795274CE839002B957F /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
 		CF47D09B2747492100831C75 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CF47D09D27474C9600831C75 /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
@@ -60,10 +58,12 @@
 		CF703BB2274BDD5D008A599C /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CF703BB3274BDD5D008A599C /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		CF703BB4274BDD5D008A599C /* RemoteSongCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSongCardView.swift; sourceTree = "<group>"; };
+		CF82A688276AF8E500497374 /* SDWebImageSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SDWebImageSwiftUI; path = ../../../Downloads/SDWebImageSwiftUI; sourceTree = "<group>"; };
 		CF9A75E527475213007CD441 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		CF9A75E727475AA8007CD441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF9A75E827475F98007CD441 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		CF9A75EB27476557007CD441 /* SongCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
+		CFB13E97276ACF2700007EB9 /* SwiftyJSON */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftyJSON; path = ../../../Downloads/SwiftyJSON; sourceTree = "<group>"; };
 		CFBB2DD8274E8123003B1D2E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CFBB2DDC274F1A51003B1D2E /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
 		CFBB2DDE274F1FCB003B1D2E /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF468794274CDF1B002B957F /* SwiftyJSON in Frameworks */,
-				CF46878F274CAC4D002B957F /* SDWebImageSwiftUI in Frameworks */,
+				CFC6E4B2276AFA5400B4FD06 /* SwiftyJSON in Frameworks */,
+				CFC6E4B0276AFA5100B4FD06 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +92,8 @@
 		CF46878A274C821C002B957F /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				CF46878C274CAB4E002B957F /* SDWebImageSwiftUI */,
-				CF468792274CDF0F002B957F /* SwiftyJSON */,
+				CFB13E97276ACF2700007EB9 /* SwiftyJSON */,
+				CF82A688276AF8E500497374 /* SDWebImageSwiftUI */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -273,8 +273,8 @@
 			);
 			name = NoSignal;
 			packageProductDependencies = (
-				CF46878E274CAC4D002B957F /* SDWebImageSwiftUI */,
-				CF468793274CDF1B002B957F /* SwiftyJSON */,
+				CFC6E4AF276AFA5100B4FD06 /* SDWebImageSwiftUI */,
+				CFC6E4B1276AFA5400B4FD06 /* SwiftyJSON */,
 			);
 			productName = NoSignal;
 			productReference = CFC74D46274648E40073DD18 /* NoSignal.app */;
@@ -487,7 +487,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NoSignal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "NoSignal/Preview\\ Content";
 				DEVELOPMENT_TEAM = L7GRKRAL8S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -519,7 +519,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"NoSignal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "NoSignal/Preview\\ Content";
 				DEVELOPMENT_TEAM = L7GRKRAL8S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -567,11 +567,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CF46878E274CAC4D002B957F /* SDWebImageSwiftUI */ = {
+		CFC6E4AF276AFA5100B4FD06 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SDWebImageSwiftUI;
 		};
-		CF468793274CDF1B002B957F /* SwiftyJSON */ = {
+		CFC6E4B1276AFA5400B4FD06 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftyJSON;
 		};

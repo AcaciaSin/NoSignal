@@ -5,7 +5,7 @@
 //  Created by student9 on 2021/11/24.
 //
 
-// use:
+// usage:
 // https:\\itunes.apple.com\search?term=coldplay&entity=song
 
 import Foundation

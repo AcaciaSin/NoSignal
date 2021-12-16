@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct SearchView: View {
-    
     @EnvironmentObject var model: Model
-    
-
     @ObservedObject var viewModel: SongListViewModel
-    
     
     var body: some View {
         NavigationView {
@@ -36,7 +32,6 @@ struct SearchView: View {
 
                 }
                 .navigationBarTitle(Text("Search"), displayMode: .automatic)
-
             }
 
     }
