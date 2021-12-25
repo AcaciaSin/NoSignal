@@ -27,6 +27,7 @@ struct PlayPauseButton: View {
                 }
             })
             .padding()
+//            .foregroundColor(model.themeColor)
             .background(Color.white.opacity(0.0001))
             .onTapGesture(count: 2, perform: {
                 model.musicPlayer.skipToPreviousItem()

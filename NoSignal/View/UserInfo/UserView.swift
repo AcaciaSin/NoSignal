@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct UserView: View {
+    @State var aboutUs: Bool = false
+    @EnvironmentObject var model: Model
+    
     var body: some View {
-        ProfileHeader()
-    }
-}
-
-struct UserView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserView()
+        if self.aboutUs {
+            AboutView(aboutUs: $aboutUs)
+                .environmentObject(model)
+        } else {
+            ProfileHeader(aboutUs: $aboutUs)
+                .environmentObject(model)
+                .environmentObject(Store.shared)
+                .environmentObject(Player.shared)
+        }
     }
 }

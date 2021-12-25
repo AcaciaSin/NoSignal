@@ -15,6 +15,7 @@ struct PlaybackbarView: View {
     var body: some View {
         if let currentSong = model.currentSong {
             VStack {
+                // 将播放栏放到底部
                 Spacer(minLength: 0)
                 
                 HStack {
@@ -25,7 +26,7 @@ struct PlaybackbarView: View {
                         .aspectRatio(contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .matchedGeometryEffect(id: (currentSong.title ?? "") + "art", in: animation)
-                        .frame(width: 70, height: 70)
+                        .frame(width: 64, height: 64)
                         .padding()
                     
                     VStack(alignment: .leading) {
@@ -63,6 +64,5 @@ struct PlaybackbarView: View {
                 .matchedGeometryEffect(id: (currentSong.title ?? "") + "frame", in: animation)
             }
         }
-        
     }
 }

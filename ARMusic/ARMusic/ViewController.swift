@@ -15,10 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
-        
-        
+
         InstrumentComponent.registerComponent()
 
         setupGestureRecognizer()
@@ -55,7 +52,7 @@ class ViewController: UIViewController {
                 
                 cancellable?.cancel()
             })
-        var textEntity = Entity()
+        let textEntity = Entity()
         textEntity.setText("Royals - Lorde")
         textEntity.position.x = 0
         textEntity.position.y = 0.3
@@ -102,12 +99,12 @@ extension ViewController {
     }
 }
 
-extension Entity{
+extension Entity {
 
   /// Changes The Text Of An Entity
   /// - Parameters:
   ///   - content: String
-  func setText(_ content: String){ self.components[ModelComponent] = self.generatedModelComponent(text: content) }
+    func setText(_ content: String){ self.components[ModelComponent.self] = self.generatedModelComponent(text: content) }
 
   /// Generates A Model Component With The Specified Text
   /// - Parameter text: String

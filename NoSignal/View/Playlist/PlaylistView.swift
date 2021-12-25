@@ -18,8 +18,7 @@ struct PlaylistView: View {
                                     GridItem(.flexible(), spacing: 20)],
                           spacing: 20) {
                     ForEach(model.playlists, id:\.self) { playlist in
-                        
-                        NavigationLink (destination: PlaylistDetailView(playlist: playlist),
+                        NavigationLink (destination: AppleMusicPlayListDetailView(playlist: playlist),
                                         label: {
                             PlaylistCardView(playlist: playlist).drawingGroup()
                         })

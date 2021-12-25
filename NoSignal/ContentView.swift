@@ -6,21 +6,20 @@
 //
 
 import SwiftUI
+import NeumorphismSwiftUI
 
 struct ContentView: View {
+    @State var selection = 0                            // TabView 选择器
+    @ObservedObject var model = Model.shared            // Model 维护 Apple Music 的 MediaPlayer
+//    @ObservedObject var viewModel: SongListViewModel    // viewModel 维护 Itunes API 的搜索
     
-    @ObservedObject var model = Model.shared
-    @State var selection = 0
-    @ObservedObject var viewModel: SongListViewModel
-    
-    
-    @State var views = [
-        TabItem(tag: 1, title: Text("Playlist"), image: Image(systemName: "music.note.list"),view: AnyView(PlaylistView())),
-        TabItem(tag: 2, title: Text("Library"), image: Image(systemName: "music.note"), view: AnyView(LibraryView())),
-//        TabItem(tag: 2, title: Text("Search"), image: Image(systemName: "magnifyingglass"), view: AnyView(SearchView()))
-        TabItem(tag: 3, title: Text("User"), image: Image(systemName: "person.fill"), view: AnyView(UserView())),
-    ]
-    
+    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var player: Player
+    private var album: AppState.Album { store.appState.album }
+    private var artist: AppState.Artist { store.appState.artist }
+    private var playlist: AppState.Playlist { store.appState.playlist }
+    private var user: User? { store.appState.settings.loginUser }
+
     var body: some View {
         ZStack {
             InvisibleRefreshView()
@@ -29,8 +28,21 @@ struct ContentView: View {
             
             
             TabView(selection: $selection) {
-                SearchView(viewModel: viewModel)
-                    .environmentObject(model)
+                if model.SearchToggle {
+                    NavigationView {
+                        VStack {
+                            HStack(spacing: 20.0) {
+                                NeteaseSearchBarView()
+                                Spacer(minLength: 4)
+                            }
+                            Spacer()
+                            EmptyStateView(theme: $model.themeColor)
+                            Spacer()
+                        }
+                        .navigationBarTitle("Search", displayMode: .automatic)
+                    }
+//                    SearchView(viewModel: SongListViewModel())
+//                        .environmentObject(model)
                     .tabItem {
                         VStack {
                             Image(systemName: "magnifyingglass")
@@ -38,46 +50,108 @@ struct ContentView: View {
                         }
                     }
                     .tag(0)
+                }
                 
-                ForEach(views) { view in
-                    view.view
+                if model.PlaylistToggle {
+                    if user != nil {
+                        NavigationView {
+                            VStack(spacing: 0) {
+                                HStack(spacing: 20.0) {
+                                    NeteaseSearchBarView()
+                                }
+                                .padding([.leading, .bottom, .trailing])
+                                Divider()
+                                if store.appState.initRequestingCount == 0 {
+                                    ScrollView {
+                                        VStack {
+                                            RecommendPlaylistView(playlist: playlist.recommendPlaylist)
+                                                .padding(.top, 10)
+                                            Divider()
+                                            CreatedPlaylistView(playlist: playlist.userPlaylist.filter({ $0.userId == user?.userId }))
+                                                .padding(.top, 10)
+                                            Divider()
+                                            SubedPlaylistView(playlist: playlist.userPlaylist.filter({ $0.userId != user?.userId }))
+                                                .padding(.top, 10)
+                                            Divider()
+                                            SubedAlbumsView(albums: album.albumSublist)
+                                                .padding(.top, 10)
+//                                            Divider()
+    //                                        ArtistSublistView(artists: artist.artistSublist)
+//                                                .padding(.top, 10)
+                                        }
+                                    }
+                                    PlayerControlBarView()
+                                } else {
+                                    Spacer()
+                                }
+                            }
+                            .navigationBarHidden(true)
+                        }
+                        .navigationViewStyle(StackNavigationViewStyle())
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "music.note.list")
+                                Text("Playlist")
+                            }
+                        }
+                        .tag(1)
+                    } else {
+                        PlaylistView()
+                            .environmentObject(model)
+                            .tabItem {
+                                VStack {
+                                    Image(systemName: "music.note.list")
+                                    Text("Playlist")
+                                }
+                            }
+                            .tag(1)
+                    }
+                    
+
+                }
+                
+                if model.LibraryToggle {
+                    LibraryView()
                         .environmentObject(model)
                         .tabItem {
                             VStack {
-                                view.image
-                                view.title
+                                Image(systemName: "music.note")
+                                Text("Library")
                             }
                         }
-                        .tag(view.tag)
+                        .tag(2)
                 }
+                UserView()
+                    .environmentObject(model)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "person.fill")
+                            Text("User")
+                        }
+                    }
+                    .tag(3)
+
+
             }
             .zIndex(1.0)
-//            .id(myArray.count + 2)
-//            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             
-            NowPlayingView()
-                .environmentObject(model)
-                .zIndex(2.0)
+            if user == nil {
+                NowPlayingView()
+                    .environmentObject(model)
+                    .zIndex(2.0)
+                    .opacity(selection == 3 || selection == 0 ? 0 : 1)
+            } else {
+                NowPlayingView()
+                    .environmentObject(model)
+                    .zIndex(2.0)
+                    .opacity(selection == 2 ? 1 : 0)
+            }
+
         }
-        .accentColor(.indigo)
-        .onAppear() {
-            // 接口暂时无法访问
-//            DispatchQueue.global(qos: .userInitiated).async {
-//                _ = AppleMusicAPI.shared
-//            }
-            
+        .alert(item: $store.appState.error) { error in
+            Alert(title: Text(error.localizedDescription))
         }
+        .accentColor(model.themeColor)
     }
 }
 
-
-struct TabItem: Identifiable {
-    var id = UUID()
-    var tag: Int
-    var title: Text
-    var image: Image
-    var view: AnyView = AnyView(PlaylistView())
-}
-
-// You cannot declare a property of type View because View is a protocol with an associated type.
-// Instead, you need to declare destinationView to be of a type that conforms to the View protocol.

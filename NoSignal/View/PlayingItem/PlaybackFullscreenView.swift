@@ -53,11 +53,9 @@ struct PlaybackFullscreenView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(currentSong.title ?? "")
-//                                .font(.headline)
                                 .font(Font.system(.title2).bold())
-                            
+                        
                             Text(currentSong.artist ?? "")
-//                                .font(.caption)
                                 .font(Font.system(.title3).bold())
                                 .foregroundColor(.secondary)
                         }
@@ -79,7 +77,7 @@ struct PlaybackFullscreenView: View {
                                         }
                                     }
                                 }
-                            
+                    
                             Image("concert")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -87,12 +85,12 @@ struct PlaybackFullscreenView: View {
                                 .font(.largeTitle)
                                 .font(.system(size: 30))
                             
-                            Image("lyrics")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                                .font(.largeTitle)
-                                .font(.system(size: 30))
+//                            Image("lyrics")
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .frame(width: 40, height: 40)
+//                                .font(.largeTitle)
+//                                .font(.system(size: 30))
 
                         }
                         .padding(.trailing, 20)
@@ -210,7 +208,5 @@ extension UIImage {
                        green: CGFloat(bitmap[1]) / 255,
                        blue: CGFloat(bitmap[2])  / 255,
                        alpha: CGFloat(bitmap[3]) / 255)
-        
-        
     }
 }
