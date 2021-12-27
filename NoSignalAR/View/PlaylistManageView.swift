@@ -19,7 +19,6 @@ struct PlaylistManageView: View {
     
     var body: some View {
         ZStack {
-            QinBackgroundView()
             VStack {
                 HStack {
                     Spacer()
@@ -83,7 +82,7 @@ struct UserPlaylistRowView: View {
     
     var body: some View {
         HStack {
-            QinCoverView(playlist.coverImgUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
+            RectangleCoverView(playlist.coverImgUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
             VStack(alignment: .leading) {
                 Text(playlist.name)
                     .font(.headline)

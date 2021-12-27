@@ -41,7 +41,7 @@ struct CommonGridItemView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            QinCoverView(configuration.picUrl, style: QinCoverStyle(size: .medium, shape: .rectangle))
+            RectangleCoverView(configuration.picUrl, style: QinCoverStyle(size: .medium, shape: .rectangle))
                 .padding()
             Group {
                 Text(configuration.name ?? "Playlist Unknown")

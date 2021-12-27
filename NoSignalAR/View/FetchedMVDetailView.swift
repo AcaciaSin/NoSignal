@@ -17,7 +17,6 @@ struct FetchedMVDetailView: View {
 
     var body: some View {
         ZStack {
-            QinBackgroundView()
             VStack(spacing: 10) {
                 CommonNavigationBarView(id: id, title: "MV详情", type: .mv)
                     .onAppear {

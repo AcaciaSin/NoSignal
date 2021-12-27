@@ -148,19 +148,3 @@ struct CommonNavigationBarView: View {
     }
 }
 
-
-#if DEBUG
-struct PlaylistDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            QinBackgroundView()
-            VStack {
-                FetchedPlaylistDetailView(id: 0)
-            }
-        }
-        .environmentObject(Store.shared)
-        .environmentObject(Player.shared)
-        .preferredColorScheme(.light)
-    }
-}
-#endif

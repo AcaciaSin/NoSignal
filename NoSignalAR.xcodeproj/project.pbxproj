@@ -20,7 +20,6 @@
 		CF26CEFB27795EB2001D2B0D /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEAA27795EB2001D2B0D /* DataModel.swift */; };
 		CF26CEFC27795EB2001D2B0D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEAB27795EB2001D2B0D /* DataModel.xcdatamodeld */; };
 		CF26CEFD27795EB2001D2B0D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEAE27795EB2001D2B0D /* Model.swift */; };
-		CF26CEFE27795EB2001D2B0D /* QinBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEAF27795EB2001D2B0D /* QinBackgroundView.swift */; };
 		CF26CEFF27795EB2001D2B0D /* DiscoverPlaylistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB027795EB2001D2B0D /* DiscoverPlaylistViewModel.swift */; };
 		CF26CF0027795EB2001D2B0D /* LyricParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB127795EB2001D2B0D /* LyricParser.swift */; };
 		CF26CF0127795EB2001D2B0D /* NeteaseSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB227795EB2001D2B0D /* NeteaseSong.swift */; };
@@ -29,7 +28,7 @@
 		CF26CF0427795EB2001D2B0D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB527795EB2001D2B0D /* Player.swift */; };
 		CF26CF0527795EB2001D2B0D /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB627795EB2001D2B0D /* AudioSessionManager.swift */; };
 		CF26CF0627795EB2001D2B0D /* LyricViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB727795EB2001D2B0D /* LyricViewModel.swift */; };
-		CF26CF0727795EB2001D2B0D /* QinCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB827795EB2001D2B0D /* QinCoverView.swift */; };
+		CF26CF0727795EB2001D2B0D /* RectangleCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEB827795EB2001D2B0D /* RectangleCoverView.swift */; };
 		CF26CF0827795EB2001D2B0D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEBA27795EB2001D2B0D /* DataManager.swift */; };
 		CF26CF0927795EB2001D2B0D /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEBB27795EB2001D2B0D /* CoreDataModel.swift */; };
 		CF26CF0A27795EB2001D2B0D /* UserStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CEBC27795EB2001D2B0D /* UserStorageHelper.swift */; };
@@ -160,7 +159,6 @@
 		CF26CEAA27795EB2001D2B0D /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CF26CEAC27795EB2001D2B0D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		CF26CEAE27795EB2001D2B0D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		CF26CEAF27795EB2001D2B0D /* QinBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QinBackgroundView.swift; sourceTree = "<group>"; };
 		CF26CEB027795EB2001D2B0D /* DiscoverPlaylistViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverPlaylistViewModel.swift; sourceTree = "<group>"; };
 		CF26CEB127795EB2001D2B0D /* LyricParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricParser.swift; sourceTree = "<group>"; };
 		CF26CEB227795EB2001D2B0D /* NeteaseSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseSong.swift; sourceTree = "<group>"; };
@@ -169,7 +167,7 @@
 		CF26CEB527795EB2001D2B0D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CF26CEB627795EB2001D2B0D /* AudioSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
 		CF26CEB727795EB2001D2B0D /* LyricViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricViewModel.swift; sourceTree = "<group>"; };
-		CF26CEB827795EB2001D2B0D /* QinCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QinCoverView.swift; sourceTree = "<group>"; };
+		CF26CEB827795EB2001D2B0D /* RectangleCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleCoverView.swift; sourceTree = "<group>"; };
 		CF26CEBA27795EB2001D2B0D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CF26CEBB27795EB2001D2B0D /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		CF26CEBC27795EB2001D2B0D /* UserStorageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStorageHelper.swift; sourceTree = "<group>"; };
@@ -375,7 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				CF26CEAE27795EB2001D2B0D /* Model.swift */,
-				CF26CEAF27795EB2001D2B0D /* QinBackgroundView.swift */,
 				CF26CEB027795EB2001D2B0D /* DiscoverPlaylistViewModel.swift */,
 				CF26CEB127795EB2001D2B0D /* LyricParser.swift */,
 				CF26CEB227795EB2001D2B0D /* NeteaseSong.swift */,
@@ -384,7 +381,7 @@
 				CF26CEB527795EB2001D2B0D /* Player.swift */,
 				CF26CEB627795EB2001D2B0D /* AudioSessionManager.swift */,
 				CF26CEB727795EB2001D2B0D /* LyricViewModel.swift */,
-				CF26CEB827795EB2001D2B0D /* QinCoverView.swift */,
+				CF26CEB827795EB2001D2B0D /* RectangleCoverView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -751,7 +748,7 @@
 				CF26CF2527795EB2001D2B0D /* UserPlaylistAction.swift in Sources */,
 				CF26CF4427795EB2001D2B0D /* Store.swift in Sources */,
 				CF26CEFD27795EB2001D2B0D /* Model.swift in Sources */,
-				CF26CF0727795EB2001D2B0D /* QinCoverView.swift in Sources */,
+				CF26CF0727795EB2001D2B0D /* RectangleCoverView.swift in Sources */,
 				CF26CF8C27795F48001D2B0D /* PlaylistCardView.swift in Sources */,
 				CF26CF0827795EB2001D2B0D /* DataManager.swift in Sources */,
 				CF26CEFB27795EB2001D2B0D /* DataModel.swift in Sources */,
@@ -801,7 +798,6 @@
 				CF26CF1727795EB2001D2B0D /* CloudUploadAction.swift in Sources */,
 				CF26CF4027795EB2001D2B0D /* AppState.swift in Sources */,
 				CF26CF9327795F48001D2B0D /* SongListViewModel.swift in Sources */,
-				CF26CEFE27795EB2001D2B0D /* QinBackgroundView.swift in Sources */,
 				CF26CFAF27795F48001D2B0D /* DescriptionView.swift in Sources */,
 				CF26CD762778A894001D2B0D /* NoSignalAPP.swift in Sources */,
 				CF26CFA427795F48001D2B0D /* ViewModifier.swift in Sources */,

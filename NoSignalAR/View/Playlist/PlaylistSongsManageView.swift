@@ -22,7 +22,6 @@ struct PlaylistSongsManageView: View {
     
     var body: some View {
         ZStack {
-            QinBackgroundView()
             VStack {
                 HStack {
                     Spacer()

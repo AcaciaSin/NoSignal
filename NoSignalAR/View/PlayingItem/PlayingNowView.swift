@@ -345,7 +345,8 @@ struct PlayingNowCoverView: View {
     
     var body: some View {
         let url = playing.song?.album?.coverURLString
-        QinCoverView(url, style: QinCoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape, type: type))
+//        QinCoverView(url, style: QinCoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape, type: type))
+        RectangleCoverView(url, style: QinCoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape))
             .contentShape(Circle())
             .onTapGesture(perform: tapAction)
     }

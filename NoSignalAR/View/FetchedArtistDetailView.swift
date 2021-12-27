@@ -14,7 +14,6 @@ struct FetchedArtistDetailView: View {
     
     var body: some View {
         ZStack {
-//            QinBackgroundView()
             VStack {
                 CommonNavigationBarView(id: id, title: "歌手详情", type: .artist)
                     .padding(.horizontal)
@@ -50,22 +49,6 @@ struct FetchedArtistDetailView: View {
     }
 }
 
-//#if DEBUG
-//struct ArtistView_Previews: PreviewProvider {
-//    static var previews: some View {
-////        ZStack {
-////            NEUBackgroundView()
-////            FetchedArtistDetailView(id: 12787752)
-////                .environmentObject(Store.shared)
-////        }
-//        ZStack {
-//            QinBackgroundView()
-//            ArtistDetailView(artist: Artist(context: DataManager.shared.context()))
-//                .environmentObject(Store.shared)
-//        }
-//    }
-//}
-//#endif
 
 struct ArtistDetailView: View {
     enum Selection {

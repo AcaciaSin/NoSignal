@@ -21,7 +21,6 @@ struct CommentView: View {
     
     var body: some View {
         ZStack {
-            QinBackgroundView()
             VStack {
                 HStack {
                     BackWardButton()
@@ -142,7 +141,7 @@ struct CommentRowView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
-            QinCoverView(viewModel.avatarUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
+            RectangleCoverView(viewModel.avatarUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     Text(viewModel.nickname)

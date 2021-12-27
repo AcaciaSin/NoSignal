@@ -1,12 +1,11 @@
 //
-//  QinCoverView.swift
+//  RectangleCoverView.swift
 //  NoSignal
 //
 //  Created by student9 on 2021/12/22.
 //
 
 import SwiftUI
-import NeumorphismSwiftUI
 import Kingfisher
 import struct Kingfisher.DownsamplingImageProcessor
 
@@ -72,7 +71,7 @@ enum QinCoverSize: Int, CaseIterable, Identifiable {
 struct QinCoverStyle {
     var size: QinCoverSize
     var shape: QinCoverShape
-    var type: NEUBorderStyle = .unevenness
+//    var type: NEUBorderStyle = .unevenness
     
     var cornerRadius: CGFloat { size.cornerRadius }
     var borderWidth: CGFloat {
@@ -83,7 +82,7 @@ struct QinCoverStyle {
     }
 }
 
-struct QinCoverView: View {
+struct RectangleCoverView: View {
     let urlString: String?
     let style: QinCoverStyle
     
@@ -135,35 +134,3 @@ struct QinCoverView: View {
     }
 }
 
-#if DEBUG
-fileprivate struct QinImageBorderDEBUGView: View {
-    
-    var body: some View {
-        ZStack {
-            QinBackgroundView()
-            VStack(spacing: 20) {
-                let urlString: String? = "https://p2.music.126.net/-SbVXET_BMXEDRqRGlbfLA==/1296324209218955.jpg"
-//                let urlString: String? = nil
-                ForEach(QinCoverSize.allCases) { item in
-                    HStack(spacing: 20) {
-                        QinCoverView(urlString, style: QinCoverStyle(size: item, shape: .rectangle))
-                        QinCoverView(urlString, style: QinCoverStyle(size: item, shape: .circle, type: .convexFlat))
-
-                    }
-                }
-            }
-        }
-    }
-}
-
-struct QinImageBorderView_Previews: PreviewProvider {
-    static var previews: some View {
-        QinImageBorderDEBUGView()
-            .ignoresSafeArea()
-            .preferredColorScheme(.light)
-        QinImageBorderDEBUGView()
-            .ignoresSafeArea()
-            .preferredColorScheme(.dark)
-    }
-}
-#endif
