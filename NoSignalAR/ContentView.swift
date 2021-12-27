@@ -135,7 +135,7 @@ struct ContentView: View {
                     ARMusicView()
                         .tabItem {
                             VStack {
-                                Image(systemName: "person.fill")
+                                Image(systemName: "face.smiling")
                                 Text("AR")
                             }
                         }

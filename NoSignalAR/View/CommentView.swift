@@ -40,14 +40,6 @@ struct CommentView: View {
     }
 }
 
-#if DEBUG
-struct CommentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CommentView(id: 0)
-            .environmentObject(Store.shared)
-    }
-}
-#endif
 
 struct CommentListView: View {
     @EnvironmentObject private var store: Store

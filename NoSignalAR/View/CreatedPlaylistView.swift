@@ -101,7 +101,6 @@ struct PlaylistCreateView: View {
                     Store.shared.dispatch(.playlistCreateRequest(name: name))
                 }){
                     HStack(spacing: 0.0) {
-//                        QinSFView(systemName: "folder.badge.plus", size: .medium)
                         Image(systemName: "folder.badge.plus")
                         Text("创建")
                             .font(.title3)

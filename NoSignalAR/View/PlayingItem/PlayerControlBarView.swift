@@ -28,10 +28,8 @@ struct PlayerControlBarView: View, NEUStyle {
                         Store.shared.dispatch(.playerTogglePlay(song: song))
                     }
                 }) {
-//                    QinSFView(systemName: player.isPlaying ? "pause" : "play.fill", size: .small, active: true)
                     Image(systemName: player.isPlaying ? "pause" : "play.fill")
                         .font(.title)
-//                        .background(NEUPlayButtonBackgroundView(shape: Circle(), shadow: false))
                 }
             }
             
@@ -72,3 +70,5 @@ struct PlayerControlBarView: View, NEUStyle {
         .background(BlurView(style: .systemChromeMaterial))
     }
 }
+
+
