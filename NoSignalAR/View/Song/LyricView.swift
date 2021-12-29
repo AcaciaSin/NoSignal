@@ -22,7 +22,6 @@ struct LyricView: View {
             if onelineMode {
                 Text(viewModel.lyric)
                     .fontWeight(.bold)
-//                    .foregroundColor(.orange)
                     .lineLimit(1)
             } else {
                 ScrollViewReader { proxy in

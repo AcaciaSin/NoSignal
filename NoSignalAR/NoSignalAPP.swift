@@ -24,8 +24,7 @@ struct NoSignalApp: App {
     
     var body: some Scene {
         WindowGroup {
-            // APP 启动时拉取曲库
-//            ContentView(viewModel: SongListViewModel())
+            // APP 启动时拉取曲库、注册 AR 组件、数据库、全局状态变量
             ContentView()
                 .onChange(of: scenePhase, perform: { value in
                     if value == .active {

@@ -9,7 +9,6 @@ import SwiftUI
 import MediaPlayer
 
 struct AppleMusicPlayListDetailView: View {
-    
     @EnvironmentObject var model: Model
     @Environment(\.colorScheme) var colorScheme
     let playlist: MPMediaItemCollection

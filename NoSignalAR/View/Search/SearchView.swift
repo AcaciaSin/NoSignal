@@ -19,12 +19,10 @@ struct SearchView: View {
                     SearchBar(searchTerm: $viewModel.searchTerm)
                     Text("\(viewModel.songs.count)")
                     if viewModel.songs.isEmpty {
-//                        Text("\(viewModel.songs.count)")
                         Spacer()
                         EmptyStateView(theme: $model.themeColor)
                         Spacer()
                     } else {
-//                        Text("\(viewModel.songs.count)")
                         List(viewModel.songs) { song in
                             SongView(song: song)
                         }

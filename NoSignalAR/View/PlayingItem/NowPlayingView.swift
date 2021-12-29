@@ -31,7 +31,7 @@ struct NowPlayingView: View {
                     .environmentObject(model)
                     .onTapGesture {
                         gestureStore.height = 0
-                        withAnimation(Animation.spring(response: 0.7, dampingFraction: 0.85)) {
+                        withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) {
                             Haptics.softRoll()
                             model.isPlayerViewPresented.toggle()
                         }

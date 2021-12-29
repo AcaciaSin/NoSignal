@@ -15,16 +15,22 @@ class Model: ObservableObject {
     
     var musicPlayer = MPMusicPlayerController.applicationQueuePlayer
     
+    // 用于控制 Apple Music 播放
     @Published var isPlaying = false
     @Published var isPlayerViewPresented = false
     @Published var isARShowing = false
     @Published var currentSong : MPMediaItem?
-    
     @Published var playlists = [MPMediaItemCollection]()
     @Published var librarySons = [MPMediaItem]()
     
+    // 全局主题
     @Published var themeColor = Color.indigo
     
+    // 模块化功能
+    @Published var SearchToggle: Bool = true
+    @Published var PlaylistToggle: Bool = true
+    @Published var LibraryToggle: Bool = true
+    @Published var ARToggle: Bool = true
     
 // 这种做法不好，维护一个数组虽然写法看上去简洁，但难以维护
 //    @Published var views = [
@@ -34,10 +40,7 @@ class Model: ObservableObject {
 //        TabItem(tag: 3, title: Text("User"), image: Image(systemName: "person.fill"), view: AnyView(UserView())),
 //    ]
     
-    @Published var SearchToggle: Bool = true
-    @Published var PlaylistToggle: Bool = true
-    @Published var LibraryToggle: Bool = true
-    @Published var ARToggle: Bool = true
+
 }
 
 //struct TabItem: Identifiable {

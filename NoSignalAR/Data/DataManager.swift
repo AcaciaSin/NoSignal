@@ -185,7 +185,7 @@ class DataManager {
         fetchRequest.predicate = NSPredicate(format: "%K IN %@", "id", ids)
         do {
             mvs = try context.fetch(fetchRequest) as? [MV]
-        }catch let error {
+        } catch let error {
             print("\(#function):\(error)")
         }
         return mvs
@@ -211,7 +211,7 @@ class DataManager {
         fetchRequest.predicate = NSPredicate(format: "%K == \(id)", "id")
         do {
             song = try context.fetch(fetchRequest).first as? Song
-        }catch let error {
+        } catch let error {
             print("\(#function):\(error)")
         }
         return song
@@ -224,11 +224,12 @@ class DataManager {
         fetchRequest.predicate = NSPredicate(format: "%K IN %@", "id", ids)
         do {
             songs = try context.fetch(fetchRequest) as? [Song]
-        }catch let error {
+        } catch let error {
             print("\(#function):\(error)")
         }
         return songs
     }
+    
     public func save() {
         do {
             try context().save()
@@ -247,7 +248,7 @@ class DataManager {
         model.album.artists.forEach { item in
             if let artist = getArtist(id: item.id) {
                 album.addToArtists(artist)
-            }else {
+            } else {
                 let artist = item.entity(context: context())
                 album.addToArtists(artist)
             }

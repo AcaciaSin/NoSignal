@@ -10,10 +10,9 @@ import Combine
 
 class Store: ObservableObject {
     public static let shared = Store()
-    
-    var cancellableSet = Set<AnyCancellable>()
-
     @Published var appState = AppState()
+    var cancellableSet = Set<AnyCancellable>()
+    
     func dispatch(_ action: AppAction) {
         #if DEBUG
         print("[ACTION]: \(action)")

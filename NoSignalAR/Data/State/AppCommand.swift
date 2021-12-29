@@ -15,6 +15,7 @@ import struct CoreGraphics.CGSize
 protocol AppCommand {
     func execute(in store: Store)
 }
+
 struct InitAcionCommand: AppCommand {
     func execute(in store: Store) {
         NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime).sink { (Notification) in

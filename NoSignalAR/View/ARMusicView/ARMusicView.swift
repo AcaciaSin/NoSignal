@@ -58,8 +58,6 @@ struct ARMusicView: View {
 }
 
 
-
-
 struct ARViewContainer: UIViewRepresentable {
     
     func makeCoordinator() -> Coordinator {
@@ -98,7 +96,7 @@ struct ARViewContainer: UIViewRepresentable {
         let anchor = AnchorEntity(plane: .horizontal)
         
         arView.enableObjectPlay()
-        print("add tap gesture")
+//        print("add tap gesture")
         
         
         let textEntity = Entity()
