@@ -35,6 +35,7 @@ class NeteaseSongViewModel: ObservableObject {
     }
     
     func togglePlay() {
+        isPlaying = !isPlaying
         Store.shared.dispatch(.playerTogglePlay(song: song))
     }
 }
@@ -74,6 +75,8 @@ struct NeteaseSongRowView: View {
                 Image(systemName: searchViewModel.isPlaying ? "pause.fill" : "play.fill")
                     .font(.title2)
             }
+            
+            
         }
         .padding(10)
         .background(
