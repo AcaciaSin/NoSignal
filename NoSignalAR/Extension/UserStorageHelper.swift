@@ -14,7 +14,7 @@ import RxRelay
 #endif
 
 extension UserDefaults {
-    public static let group: UserDefaults = UserDefaults(suiteName: "group.com.teenloong.Qin")!
+    public static let group: UserDefaults = UserDefaults(suiteName: "group.com.LiaoYuxuan.Nosignal")!
 }
 
 enum UserStorgeKey: String {

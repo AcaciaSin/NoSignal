@@ -41,7 +41,7 @@ struct PlayingNowView: View {
                         BackWardButton()
                             .matchedGeometryEffect(id: 0, in: namespace)
                         Spacer()
-                        QinNavigationBarTitleView("")
+                        MyNavigationBarTitleView("")
                             .transition(.move(edge: .top))
                         Spacer()
                         
@@ -69,7 +69,7 @@ struct PlayingNowView: View {
                     }
                     .padding(.horizontal)
                 } else {
-                    QinNavigationBarTitleView(playing.song?.name ?? "")
+                    MyNavigationBarTitleView(playing.song?.name ?? "")
                 }
                 
                 ZStack {
@@ -81,13 +81,13 @@ struct PlayingNowView: View {
                                 Store.shared.dispatch(.songLikeRequest(id: id, like: like))
                             } label: {
                                 let imageName = playlist.songlikedIds.contains(Int(playing.song?.id ?? 0)) ? "heart.fill" : "heart"
-                                QinSFView(systemName: imageName, size: .medium)
+                                NeteaseSongCoverView(systemName: imageName, size: .medium)
                             }
 //                            .buttonStyle(NEUDefaultButtonStyle(shape: Circle()))
                             .matchedGeometryEffect(id: 0, in: namespace)
                             Spacer()
                             Button(action: {}) {
-                                QinSFView(systemName: "ellipsis")
+                                NeteaseSongCoverView(systemName: "ellipsis")
                             }
                             .matchedGeometryEffect(id: 1, in: namespace)
                         }
@@ -138,7 +138,7 @@ struct PlayinglistView: View {
                             let rIndex = songsId.firstIndex(of: Int(right.id))!
                             return lIndex > rIndex ? false : true
                         })) { item in
-                            QinSongRowView(searchViewModel: .init(item))
+                            NeteaseSongRowView(searchViewModel: .init(item))
                                 .padding(.horizontal)
                         }
                     }
@@ -345,8 +345,8 @@ struct PlayingNowCoverView: View {
     
     var body: some View {
         let url = playing.song?.album?.coverURLString
-//        QinCoverView(url, style: QinCoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape, type: type))
-        RectangleCoverView(url, style: QinCoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape))
+//        QinCoverView(url, style: CoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape, type: type))
+        RectangleCoverView(url, style: CoverStyle(size: showMore ? .medium : .large, shape: settings.coverShape))
             .contentShape(Circle())
             .onTapGesture(perform: tapAction)
     }

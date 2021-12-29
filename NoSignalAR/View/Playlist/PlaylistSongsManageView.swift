@@ -34,12 +34,12 @@ struct PlaylistSongsManageView: View {
                             Store.shared.dispatch(.songsOrderUpdateRequesting(pid: Int(playlist.id), ids: songs.map{ Int($0.id) }))
                         }
                     }, label: {
-                        QinSFView(systemName: "checkmark", size: .medium)
+                        NeteaseSongCoverView(systemName: "checkmark", size: .medium)
                     })
                     .buttonStyle(NEUDefaultButtonStyle(shape: Circle()))
                 }
                 .overlay(
-                    QinNavigationBarTitleView("管理歌曲")
+                    MyNavigationBarTitleView("管理歌曲")
                 )
                 .padding()
                 List {

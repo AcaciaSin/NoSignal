@@ -278,7 +278,7 @@ class Store: ObservableObject {
             appState.lyric.lyric?.stopTimer()
             
         case .playerPlay:
-            appCommand = QinPlayerPlayCommand()
+            appCommand = NeteaseAppCompand()
             // lyrics
             appState.lyric.lyric?.setTimer(every: 0.1, offset: -1)
             

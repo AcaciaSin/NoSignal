@@ -47,7 +47,7 @@ struct SongListView: View {
                 LazyVStack {
                     ForEach(songs) { item in
                         if !showLike || store.appState.playlist.songlikedIds.contains(Int(item.id)) {
-                            QinSongRowView(searchViewModel: .init(item.asNeteaseSong()))
+                            NeteaseSongRowView(searchViewModel: .init(item.asNeteaseSong()))
                                 .padding(.horizontal)
                                 .onTapGesture {
                                     if Int(item.id) == Store.shared.appState.playing.song?.id {

@@ -34,7 +34,7 @@ struct ProfileHeader: View {
                 VStack(spacing: 20.0) {
                     Spacer()
                     HStack {
-                        RectangleCoverView(user?.profile.avatarUrl, style: QinCoverStyle(size: .medium, shape: .rectangle))
+                        RectangleCoverView(user?.profile.avatarUrl, style: CoverStyle(size: .medium, shape: .rectangle))
                         VStack {
                             if let nickname = user?.profile.nickname {
                                 Text(nickname)

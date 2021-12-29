@@ -1,5 +1,5 @@
 //
-//  QinSFView.swift
+//  NeteaseSongCoverView.swift
 //  NoSignal
 //
 //  Created by student9 on 2021/12/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import NeumorphismSwiftUI
 
-struct QinSFView: View {
+struct NeteaseSongCoverView: View {
     let systemName: String
     let size: ButtonSize
     let active: Bool
@@ -35,7 +35,7 @@ struct QinSFView: View {
     }
 }
 
-extension QinSFView {
+extension NeteaseSongCoverView {
     enum ButtonSize {
         case small
         case medium

@@ -25,10 +25,10 @@ struct CommentView: View {
                 HStack {
                     BackWardButton()
                     Spacer()
-                    QinNavigationBarTitleView("歌曲评论")
+                    MyNavigationBarTitleView("歌曲评论")
                     Spacer()
                     Button(action: {}) {
-                        QinSFView(systemName: "ellipsis" , size:  .medium)
+                        NeteaseSongCoverView(systemName: "ellipsis" , size:  .medium)
                         Image(systemName: "ellipsis")
                             .font(.title2)
                     }
@@ -133,7 +133,7 @@ struct CommentRowView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
-            RectangleCoverView(viewModel.avatarUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
+            RectangleCoverView(viewModel.avatarUrl, style: CoverStyle(size: .little, shape: .rectangle))
             VStack(alignment: .leading) {
                 HStack(alignment: .top) {
                     Text(viewModel.nickname)

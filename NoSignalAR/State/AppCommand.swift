@@ -677,7 +677,7 @@ struct PlayerPlayForwardCommand: AppCommand {
     }
 }
 
-struct QinPlayerPlayCommand: AppCommand {
+struct NeteaseAppCompand: AppCommand {
 
     func execute(in store: Store) {
         let playing = store.appState.playing
@@ -699,7 +699,7 @@ struct PlayerPlayRequestCommand: AppCommand {
     func execute(in store: Store) {
         if let picUrl =  DataManager.shared.getSong(id: id)?.album?.picUrl {//预先下载播放器专辑图片，避免点击专辑图片动画过渡不自然
             if let url = URL(string: picUrl) {
-                let  _ = KingfisherManager.shared.retrieveImage(with: .network(url), options: [.processor(DownsamplingImageProcessor(size: CGSize(width: QinCoverSize.large.width * 2, height: QinCoverSize.large.width * 2)))]) { (result) in
+                let  _ = KingfisherManager.shared.retrieveImage(with: .network(url), options: [.processor(DownsamplingImageProcessor(size: CGSize(width: CoverSize.large.width * 2, height: CoverSize.large.width * 2)))]) { (result) in
                     switch result {
                     case .success(_):
                         break
@@ -707,7 +707,7 @@ struct PlayerPlayRequestCommand: AppCommand {
                         break
                     }
                 }
-                let  _ = KingfisherManager.shared.retrieveImage(with: .network(url), options: [.processor(DownsamplingImageProcessor(size: CGSize(width: QinCoverSize.medium.width * 2, height: QinCoverSize.medium.width * 2)))]) { (result) in
+                let  _ = KingfisherManager.shared.retrieveImage(with: .network(url), options: [.processor(DownsamplingImageProcessor(size: CGSize(width: CoverSize.medium.width * 2, height: CoverSize.medium.width * 2)))]) { (result) in
                     switch result {
                     case .success(_):
                         break
@@ -765,7 +765,7 @@ struct PlayerTooglePlayCommand: AppCommand {
         if song == playing.song {
             if Player.shared.isPlaying {
                 store.dispatch(.playerPause)
-            }else {
+            } else {
                 store.dispatch(.playerPlay)
             }
         } else if let index = playing.playinglist.firstIndex(of: song) {
@@ -1244,7 +1244,7 @@ struct UpdateMPNowPlayingInfoCommand: AppCommand {
             return
         }
         
-        let _ = KingfisherManager.shared.retrieveImage(with: .network(url), options: [.processor(DownsamplingImageProcessor(size: CGSize(width: QinCoverSize.medium.width * UIScreen.main.scale, height: QinCoverSize.medium.width * UIScreen.main.scale)))]) { result in
+        let _ = KingfisherManager.shared.retrieveImage(with: .network(url), options: [.processor(DownsamplingImageProcessor(size: CGSize(width: CoverSize.medium.width * UIScreen.main.scale, height: CoverSize.medium.width * UIScreen.main.scale)))]) { result in
             switch result {
             case .success(let value):
                 var info = makeInfo()

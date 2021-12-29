@@ -102,7 +102,7 @@
 		CF26CF8D27795F48001D2B0D /* PlaylistManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5527795F48001D2B0D /* PlaylistManageView.swift */; };
 		CF26CF8E27795F48001D2B0D /* SongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5727795F48001D2B0D /* SongCardView.swift */; };
 		CF26CF8F27795F48001D2B0D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5827795F48001D2B0D /* LibraryView.swift */; };
-		CF26CF9027795F48001D2B0D /* QinSongRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5A27795F48001D2B0D /* QinSongRowView.swift */; };
+		CF26CF9027795F48001D2B0D /* NeteaseSongRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5A27795F48001D2B0D /* NeteaseSongRowView.swift */; };
 		CF26CF9127795F48001D2B0D /* NeteaseSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5C27795F48001D2B0D /* NeteaseSearchView.swift */; };
 		CF26CF9227795F48001D2B0D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5D27795F48001D2B0D /* SearchView.swift */; };
 		CF26CF9327795F48001D2B0D /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF5E27795F48001D2B0D /* SongListViewModel.swift */; };
@@ -115,7 +115,7 @@
 		CF26CF9A27795F48001D2B0D /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6727795F48001D2B0D /* ProfileHeader.swift */; };
 		CF26CF9B27795F48001D2B0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6827795F48001D2B0D /* LoginView.swift */; };
 		CF26CF9C27795F48001D2B0D /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6927795F48001D2B0D /* UserView.swift */; };
-		CF26CF9D27795F48001D2B0D /* QinSFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6A27795F48001D2B0D /* QinSFView.swift */; };
+		CF26CF9D27795F48001D2B0D /* NeteaseSongCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6A27795F48001D2B0D /* NeteaseSongCoverView.swift */; };
 		CF26CF9E27795F48001D2B0D /* CreatedPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6B27795F48001D2B0D /* CreatedPlaylistView.swift */; };
 		CF26CF9F27795F48001D2B0D /* CommonGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6C27795F48001D2B0D /* CommonGridItemView.swift */; };
 		CF26CFA027795F48001D2B0D /* FetchedPlaylistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26CF6D27795F48001D2B0D /* FetchedPlaylistDetailView.swift */; };
@@ -239,7 +239,7 @@
 		CF26CF5527795F48001D2B0D /* PlaylistManageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistManageView.swift; sourceTree = "<group>"; };
 		CF26CF5727795F48001D2B0D /* SongCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
 		CF26CF5827795F48001D2B0D /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
-		CF26CF5A27795F48001D2B0D /* QinSongRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QinSongRowView.swift; sourceTree = "<group>"; };
+		CF26CF5A27795F48001D2B0D /* NeteaseSongRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseSongRowView.swift; sourceTree = "<group>"; };
 		CF26CF5C27795F48001D2B0D /* NeteaseSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseSearchView.swift; sourceTree = "<group>"; };
 		CF26CF5D27795F48001D2B0D /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CF26CF5E27795F48001D2B0D /* SongListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 		CF26CF6727795F48001D2B0D /* ProfileHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		CF26CF6827795F48001D2B0D /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CF26CF6927795F48001D2B0D /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		CF26CF6A27795F48001D2B0D /* QinSFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QinSFView.swift; sourceTree = "<group>"; };
+		CF26CF6A27795F48001D2B0D /* NeteaseSongCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseSongCoverView.swift; sourceTree = "<group>"; };
 		CF26CF6B27795F48001D2B0D /* CreatedPlaylistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedPlaylistView.swift; sourceTree = "<group>"; };
 		CF26CF6C27795F48001D2B0D /* CommonGridItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonGridItemView.swift; sourceTree = "<group>"; };
 		CF26CF6D27795F48001D2B0D /* FetchedPlaylistDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedPlaylistDetailView.swift; sourceTree = "<group>"; };
@@ -276,6 +276,7 @@
 		CF26CF8327795F48001D2B0D /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		CF26CF8427795F48001D2B0D /* SubedAlbumsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubedAlbumsView.swift; sourceTree = "<group>"; };
 		CF26CF8527795F48001D2B0D /* SongListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		CFDB0372277C629B00F7946C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +315,7 @@
 		CF26CD642778A86D001D2B0D /* NoSignalAR */ = {
 			isa = PBXGroup;
 			children = (
+				CFDB0372277C629B00F7946C /* Info.plist */,
 				CF26CD752778A894001D2B0D /* NoSignalAPP.swift */,
 				CF26CD672778A86D001D2B0D /* ContentView.swift */,
 				CF26CD8B2778A9E8001D2B0D /* ARMusicView.swift */,
@@ -545,7 +547,7 @@
 		CF26CF5927795F48001D2B0D /* Song */ = {
 			isa = PBXGroup;
 			children = (
-				CF26CF5A27795F48001D2B0D /* QinSongRowView.swift */,
+				CF26CF5A27795F48001D2B0D /* NeteaseSongRowView.swift */,
 			);
 			path = Song;
 			sourceTree = "<group>";
@@ -578,7 +580,7 @@
 				CF26CF6727795F48001D2B0D /* ProfileHeader.swift */,
 				CF26CF6827795F48001D2B0D /* LoginView.swift */,
 				CF26CF6927795F48001D2B0D /* UserView.swift */,
-				CF26CF6A27795F48001D2B0D /* QinSFView.swift */,
+				CF26CF6A27795F48001D2B0D /* NeteaseSongCoverView.swift */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -709,7 +711,7 @@
 				CF26CF0127795EB2001D2B0D /* NeteaseSong.swift in Sources */,
 				CF26CF9F27795F48001D2B0D /* CommonGridItemView.swift in Sources */,
 				CF26CF1427795EB2001D2B0D /* NCMSearchSongResponse.swift in Sources */,
-				CF26CF9027795F48001D2B0D /* QinSongRowView.swift in Sources */,
+				CF26CF9027795F48001D2B0D /* NeteaseSongRowView.swift in Sources */,
 				CF26CF9227795F48001D2B0D /* SearchView.swift in Sources */,
 				CF26CF2827795EB2001D2B0D /* SongDetailAction.swift in Sources */,
 				CF26CFA227795F48001D2B0D /* FetchedMVDetailView.swift in Sources */,
@@ -771,7 +773,7 @@
 				CF26CF0027795EB2001D2B0D /* LyricParser.swift in Sources */,
 				CF26CF8B27795F48001D2B0D /* DiscoverPlaylistView.swift in Sources */,
 				CF26CF0D27795EB2001D2B0D /* SearchViewModel.swift in Sources */,
-				CF26CF9D27795F48001D2B0D /* QinSFView.swift in Sources */,
+				CF26CF9D27795F48001D2B0D /* NeteaseSongCoverView.swift in Sources */,
 				CF26CF1827795EB2001D2B0D /* PlaylistDeleteAction.swift in Sources */,
 				CF26CF9927795F48001D2B0D /* AboutView.swift in Sources */,
 				CF26CD682778A86D001D2B0D /* ContentView.swift in Sources */,
@@ -953,6 +955,7 @@
 				DEVELOPMENT_TEAM = L7GRKRAL8S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NoSignalAR/Info.plist;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app requires Apple Music library access to play music tracks.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -986,6 +989,7 @@
 				DEVELOPMENT_TEAM = L7GRKRAL8S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NoSignalAR/Info.plist;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app requires Apple Music library access to play music tracks.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

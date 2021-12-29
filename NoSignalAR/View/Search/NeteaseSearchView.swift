@@ -93,7 +93,7 @@ struct SearchPlaylistResultRowView: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            RectangleCoverView(viewModel.coverImgUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
+            RectangleCoverView(viewModel.coverImgUrl, style: CoverStyle(size: .little, shape: .rectangle))
             VStack(alignment: .leading) {
                 Text(viewModel.name)
                     .foregroundColor(Color.mainText)
@@ -112,7 +112,7 @@ struct SearchSongResultView: View {
         ScrollView {
             LazyVStack {
                 ForEach(songs) { item in
-                    QinSongRowView(searchViewModel: .init(item))
+                    NeteaseSongRowView(searchViewModel: .init(item))
                         .padding(.horizontal)
                 }
             }

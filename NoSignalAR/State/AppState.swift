@@ -44,7 +44,7 @@ extension AppState {
             case dark, light, system
         }
         var accountBehavior = AccountBehavior.login
-        @CombineUserStorge(key: .playerCoverShape, container: .standard) var coverShape: QinCoverShape = .circle
+        @CombineUserStorge(key: .playerCoverShape, container: .standard) var coverShape: CoverShape = .circle
         var loginRequesting = false
         @CombineUserStorge(key: .loginUser, container: .standard) var loginUser: User? = nil
         @CombineUserStorge(key: .playerPlayingMode, container: .standard) var playMode: PlayMode = .playlist

@@ -86,7 +86,6 @@ public struct BackWardButton: View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         }) {
-//            QinSFView(systemName: "chevron.backward" ,size: .medium)
             Image(systemName: "chevron.backward")
                 .font(.title)
         }
@@ -94,7 +93,7 @@ public struct BackWardButton: View {
     }
 }
 
-struct QinNavigationBarTitleView: View {
+struct MyNavigationBarTitleView: View {
     let title: String
     
     init(_ title: String) {

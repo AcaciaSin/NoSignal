@@ -74,7 +74,7 @@ struct AlbumDetailView: View {
                     let sub = !Store.shared.appState.album.subedIds.contains(Int(id))
                     Store.shared.dispatch(.albumSubRequest(id: Int(id), sub: sub))
                 }) {
-                    QinSFView(systemName: store.appState.album.subedIds.contains(Int(album.id)) ? "heart.fill" : "heart",
+                    NeteaseSongCoverView(systemName: store.appState.album.subedIds.contains(Int(album.id)) ? "heart.fill" : "heart",
                               size: .small)
                 }
                 .buttonStyle(NEUDefaultButtonStyle(shape: Circle()))

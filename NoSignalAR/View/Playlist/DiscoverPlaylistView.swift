@@ -28,7 +28,7 @@ struct DiscoverPlaylistView: View {
                 HStack {
                     BackWardButton()
                     Spacer()
-                    QinNavigationBarTitleView("发现歌单")
+                    MyNavigationBarTitleView("发现歌单")
                     Spacer()
                     PlayingNowButtonView()
                 }

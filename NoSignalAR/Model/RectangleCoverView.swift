@@ -31,7 +31,7 @@ struct AnyShape: Shape {
     private let _path: (CGRect) -> Path
 }
 
-enum QinCoverShape: Int, CaseIterable, Codable {
+enum CoverShape: Int, CaseIterable, Codable {
     case circle, rectangle
     var systemName: String {
         switch self {
@@ -43,7 +43,7 @@ enum QinCoverShape: Int, CaseIterable, Codable {
     }
 }
 
-enum QinCoverSize: Int, CaseIterable, Identifiable {
+enum CoverSize: Int, CaseIterable, Identifiable {
     var id: Int { rawValue }
     case little
     case small
@@ -68,9 +68,9 @@ enum QinCoverSize: Int, CaseIterable, Identifiable {
     var cornerRadius: CGFloat { minLength / 4 }
 }
 
-struct QinCoverStyle {
-    var size: QinCoverSize
-    var shape: QinCoverShape
+struct CoverStyle {
+    var size: CoverSize
+    var shape: CoverShape
 //    var type: NEUBorderStyle = .unevenness
     
     var cornerRadius: CGFloat { size.cornerRadius }
@@ -84,7 +84,7 @@ struct QinCoverStyle {
 
 struct RectangleCoverView: View {
     let urlString: String?
-    let style: QinCoverStyle
+    let style: CoverStyle
     
 //    func getshape() -> AnyShape {
 //        switch style.shape {
@@ -93,7 +93,7 @@ struct RectangleCoverView: View {
 //        }
 //    }
 
-    init(_ urlString: String?, style: QinCoverStyle) {
+    init(_ urlString: String?, style: CoverStyle) {
         self.urlString = urlString
         self.style = style
     }

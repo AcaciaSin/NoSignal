@@ -44,10 +44,12 @@ class Player: AVPlayer, ObservableObject {
         self.addPeriodicTimeObserver()
         Store.shared.dispatch(.updateMPNowPlayingInfo)
     }
+    
     func playWithURL(url: URL) {
         self.removePeriodicTimeObserver()
         prepareToPlay(url: url)
     }
+    
     func prepareToPlay(url: URL) {
         // Create asset to be played
         let asset = AVAsset(url: url)
@@ -132,7 +134,7 @@ class Player: AVPlayer, ObservableObject {
         if keyPath == #keyPath(AVPlayer.rate) {
             if rate == 0 {
                 isPlaying = false
-            }else {
+            } else {
                 isPlaying = true
             }
         }

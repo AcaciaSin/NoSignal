@@ -82,7 +82,7 @@ struct PlaylistDetailView: View {
                     Button(action: {
                         showPlaylistSongsManage.toggle()
                     }) {
-                        QinSFView(systemName: "lineweight",
+                        NeteaseSongCoverView(systemName: "lineweight",
                                   size: .small)
                             .sheet(isPresented: $showPlaylistSongsManage) {
                                 PlaylistSongsManageView(showSheet: $showPlaylistSongsManage, playlist: playlist)
@@ -136,13 +136,13 @@ struct CommonNavigationBarView: View {
                     }
                 }
             }){
-                QinSFView(systemName: "arrow.triangle.2.circlepath", size: .big, inactiveColor: .accentColor)
+                NeteaseSongCoverView(systemName: "arrow.triangle.2.circlepath", size: .big, inactiveColor: .accentColor)
             }
             PlayingNowButtonView()
         }
         .overlay(
             HStack {
-                QinNavigationBarTitleView(title)
+                MyNavigationBarTitleView(title)
             }
         )
     }

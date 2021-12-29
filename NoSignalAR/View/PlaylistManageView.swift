@@ -28,12 +28,12 @@ struct PlaylistManageView: View {
                             Store.shared.dispatch(.playlistOrderUpdateRequesting(ids: ids))
                         }
                     }, label: {
-                        QinSFView(systemName: "checkmark", size: .medium)
+                        NeteaseSongCoverView(systemName: "checkmark", size: .medium)
                     })
                     .buttonStyle(NEUDefaultButtonStyle(shape: Circle()))
                 }
                 .overlay(
-                    QinNavigationBarTitleView("管理歌单")
+                    MyNavigationBarTitleView("管理歌单")
                 )
                 .padding()
                 List {
@@ -82,7 +82,7 @@ struct UserPlaylistRowView: View {
     
     var body: some View {
         HStack {
-            RectangleCoverView(playlist.coverImgUrl, style: QinCoverStyle(size: .little, shape: .rectangle))
+            RectangleCoverView(playlist.coverImgUrl, style: CoverStyle(size: .little, shape: .rectangle))
             VStack(alignment: .leading) {
                 Text(playlist.name)
                     .font(.headline)

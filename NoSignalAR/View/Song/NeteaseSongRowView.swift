@@ -1,5 +1,5 @@
 //
-//  QinSongRowView.swift
+//  NeteaseSongRowView.swift
 //  NoSignal
 //
 //  Created by student9 on 2021/12/24.
@@ -9,7 +9,7 @@ import SwiftUI
 import NeumorphismSwiftUI
 import Combine
 
-class QinSongRowViewModel: ObservableObject {
+class NeteaseSongViewModel: ObservableObject {
     var song: NeteaseSong
 
     @Published var like: Bool = false
@@ -39,8 +39,8 @@ class QinSongRowViewModel: ObservableObject {
     }
 }
 
-struct QinSongRowView: View {
-    @ObservedObject var searchViewModel: QinSongRowViewModel
+struct NeteaseSongRowView: View {
+    @ObservedObject var searchViewModel: NeteaseSongViewModel
     
     var body: some View {
         HStack {
