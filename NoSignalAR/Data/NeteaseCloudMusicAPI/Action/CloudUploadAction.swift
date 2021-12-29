@@ -34,3 +34,8 @@ public struct CloudUploadAction: NeteaseCloudMusicAction {
     public let parameters = Parameters()
     public let responseType = Response.self
 }
+
+public struct CloudUploadResponse: NeteaseCloudMusicResponse {
+    public var code: Int
+    public var message: String?
+}

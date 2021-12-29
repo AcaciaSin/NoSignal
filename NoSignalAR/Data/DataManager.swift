@@ -37,14 +37,17 @@ class DataManager {
 //        container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
+    
     public func context() -> NSManagedObjectContext {
         return self.persistentContainer.viewContext
     }
+    
     public func newBackgroundUniqueContext() -> NSManagedObjectContext {
         let context = persistentContainer.newBackgroundContext()
         context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         return context
     }
+    
     public func batchDelete<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil) {
         #if DEBUG
         print("\(#function): \(type)")
@@ -57,6 +60,7 @@ class DataManager {
         let result = try? context.fetch(fetchRequest) as? [NSManagedObject]
         result?.forEach(context.delete)
     }
+    
     public func batchDelete(entityName: String, predicate: NSPredicate? = nil) {
         #if DEBUG
         print("\(#function): \(entityName)")
@@ -73,6 +77,7 @@ class DataManager {
             print("\(#function):\(error)")
         }
     }
+    
     public func batchInsert<T: NSManagedObject, Element: CoreDataManged>(type: T.Type, models: [Element]) {
         #if DEBUG
         print("\(#function): \(type)")
@@ -82,6 +87,7 @@ class DataManager {
             _ = item.entity(context: context())
         }
     }
+    
     public func batchOrderInsert<T: NSManagedObject, Element: CoreDataManged>(type: T.Type, models: [Element]) where T: CoreDataOrdered {
         #if DEBUG
         print("\(#function): \(type)")
@@ -92,6 +98,7 @@ class DataManager {
             entity?.orderNumber = Int64(index)
         })
     }
+    
     public func batchInsert(entityName: String, objects: [[String: Any]]) {
         defer { save() }
         do {
@@ -103,10 +110,12 @@ class DataManager {
             print("\(#function):\(error)")
         }
     }
+    
     public func batchInsertAfterDeleteAll(entityName: String, objects: [[String: Any]]) {
         batchDelete(entityName: entityName)
         batchInsert(entityName: entityName, objects: objects)
     }
+    
     public func batchUpdate(entityName: String, propertiesToUpdate: [AnyHashable : Any], predicate: NSPredicate? = nil) {
         defer { save() }
         do {
@@ -117,10 +126,11 @@ class DataManager {
             
             let updateResult = try context.execute(updateRequest) as! NSBatchUpdateResult
             print("\(#function)",updateResult)
-        }catch let error {
+        } catch let error {
             print("\(#function):\(error)")
         }
     }
+    
     public func update<T: CoreDataManged>(model: T) {
         #if DEBUG
         print("\(#function): \(type(of: model))")
@@ -128,6 +138,7 @@ class DataManager {
         defer { save() }
         _ = model.entity(context: context())
     }
+    
     public func getAlbum(id: Int) -> Album? {
         var album: Album? = nil
         do {
@@ -140,6 +151,7 @@ class DataManager {
         }
         return album
     }
+    
     public func getArtist(id: Int) -> Artist? {
         var artist: Artist? = nil
         let context = self.context()
@@ -152,6 +164,7 @@ class DataManager {
         }
         return artist
     }
+    
     public func getMV(id: Int64) -> MV? {
         var mv: MV? = nil
         let context = self.context()
@@ -164,6 +177,7 @@ class DataManager {
         }
         return mv
     }
+    
     public func getMVs(ids: [Int64]) -> [MV]? {
         var mvs: [MV]? = nil
         let context = self.context()
@@ -176,6 +190,7 @@ class DataManager {
         }
         return mvs
     }
+    
     public func getPlaylist(id: Int64) -> Playlist? {
         var playlist: Playlist? = nil
         let context = self.context()
@@ -183,11 +198,12 @@ class DataManager {
         fetchRequest.predicate = NSPredicate(format: "%K == \(id)", "id")
         do {
             playlist = try context.fetch(fetchRequest).first as? Playlist
-        }catch let error {
+        } catch let error {
             print("\(#function):\(error)")
         }
         return playlist
     }
+    
     public func getSong(id: Int) -> Song? {
         var song: Song? = nil
         let context = self.context()
@@ -200,6 +216,7 @@ class DataManager {
         }
         return song
     }
+    
     public func getSongs(ids: [Int]) -> [Song]? {
         var songs: [Song]? = nil
         let context = self.context()
@@ -215,12 +232,13 @@ class DataManager {
     public func save() {
         do {
             try context().save()
-        }catch let error {
+        } catch let error {
             #if DEBUG
             print("\(type(of: self)) \(#function) \(error)")
             #endif
         }
     }
+    
     public func updateAlbum(model: AlbumDetailResponse) {
         defer { save() }
         
@@ -247,15 +265,18 @@ class DataManager {
             }
         }
     }
+    
     public func updateArtist(model: ArtistResponse) {
         defer { save() }
         _ = model.entity(context: context())
     }
+    
     public func updateArtist(artistModel: ArtistResponse, introduction: String) {
         defer { save() }
         let artist = artistModel.entity(context: context())
         artist.introduction = introduction
     }
+    
     public func updateArtistAlbums(id: Int, model: ArtistAlbumsResponse) {
         defer { save() }
         if let artist = getArtist(id: id) {
@@ -272,6 +293,7 @@ class DataManager {
             }
         }
     }
+    
     public func updateArtistMVs(id: Int64, mvIds: [Int64]) {
         if let artist = self.getArtist(id: Int(id)) {
             if let mvs = artist.mvs {
@@ -283,6 +305,7 @@ class DataManager {
             self.save()
         }
     }
+    
     public func updateArtistHotSongs(to id: Int, songsId: [Int]) {
         defer { save() }
         guard let artist = getArtist(id: id) else { return }
@@ -307,6 +330,7 @@ class DataManager {
             }
         }
     }
+    
     public func updatePlaylistSongs(id: Int, songsId: [Int]) {
         defer { save() }
 
@@ -327,7 +351,7 @@ class DataManager {
             let song = item.entity(context: self.context())
             if let album = getAlbum(id: item.album.id) {
                 album.addToSongs(song)
-            }else {
+            } else {
                 let album = item.album.entity(context: self.context())
                 album.addToSongs(song)
             }

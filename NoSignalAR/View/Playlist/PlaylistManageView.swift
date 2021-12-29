@@ -30,7 +30,6 @@ struct PlaylistManageView: View {
                     }, label: {
                         NeteaseSongCoverView(systemName: "checkmark", size: .medium)
                     })
-                    .buttonStyle(NEUDefaultButtonStyle(shape: Circle()))
                 }
                 .overlay(
                     MyNavigationBarTitleView("管理歌单")
