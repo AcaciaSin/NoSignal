@@ -23,7 +23,7 @@ SYSU MOSAD 2021 Final Project
 
 ### Core Data
 
-![img](https://gitee.com/AdBean/img/raw/master/images/202112301251749.png)
+<img src=".\Images\coredata.png" style="zoom:50%;" />
 
 ### Redux
 
