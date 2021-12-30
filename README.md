@@ -47,28 +47,28 @@ https://sysumatrix.feishu.cn/docs/doccnB0Y3h9hNYjUQVNWjlXi7Xc
 
 ## 成果展示
 
-<img src=".\Images\SearchView.PNG" alt="SearchView" style="zoom:33%;" />
+<img src=".\Images\SearchView.PNG" alt="SearchView" style="zoom:20%;" />
 
-<img src=".\Images\PlayListView.png" style="zoom:33%;" />
+<img src=".\Images\PlayListView.PNG" style="zoom:20%;" />
 
-<img src=".\Images\LibraryView.png" style="zoom:33%;" />
+<img src=".\Images\LibraryView.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5457.png" style="zoom:33%;" />
+<img src=".\Images\IMG_5457.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5459.png" style="zoom:33%;" />
+<img src=".\Images\IMG_5459.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5461.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5461.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5462.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5462.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5465.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5465.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5466.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5466.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5471.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5471.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5473.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5473.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5474.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5474.PNG" style="zoom:20%;" />
 
-<img src=".\Images\IMG_5477.PNG" style="zoom:33%;" />
+<img src=".\Images\IMG_5477.PNG" style="zoom:20%;" />
